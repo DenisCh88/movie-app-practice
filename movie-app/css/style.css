@@ -1,0 +1,253 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:regular,700,900&display=swap&subset=cyrillic-ext");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+/* fonts
+&display=swap&subset=cyrillic-ext*/
+/*--------------------*/
+body {
+  font-family: "Inconsolata", sans-serif;
+  font-size: 18px;
+  background-color: #000;
+  background: url("../source/img/167271-zhivopis-risovanie-abstraktnoe_iskusstvo-art-cifrovoe_iskusstvo-1420x3000.jpg") 0 0/cover no-repeat fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+
+/*--------------------*/
+.container {
+  width: 1420px;
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+/*--------------------*/
+.header {
+  background-color: #000;
+}
+.header__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 1rem;
+}
+.header__search {
+  border: 2px solid #eef1f6;
+  border-radius: 50px;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0.5rem 1rem;
+  color: #000;
+  width: 250px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+.header__search:focus {
+  width: 100%;
+  background-color: #eef1f6;
+}
+
+/*--------------------*/
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.main__movie {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px 0px;
+}
+
+.movie {
+  width: 300px;
+  margin: 1rem;
+  background-color: #000;
+  -webkit-box-shadow: 0px 0px 0px 5px rgba(66, 66, 66, 0.4);
+          box-shadow: 0px 0px 0px 5px rgba(66, 66, 66, 0.4);
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  color: #eef1f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.movie:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.6);
+}
+.movie:hover .movie__overview {
+  opacity: 1;
+}
+.movie:hover .movie__img, .movie:hover .movie__info {
+  opacity: 0.2;
+}
+.movie__img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.movie__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+  min-height: 50px;
+}
+.movie__header {
+  max-width: 200px;
+  font-weight: 700;
+  font-size: 21px;
+}
+.movie__overview {
+  opacity: 0;
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  overflow: auto;
+  max-height: 100%;
+}
+
+.img__movie {
+  width: 100%;
+}
+
+/*--------------------*/
