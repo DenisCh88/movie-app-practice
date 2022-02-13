@@ -14,7 +14,7 @@ body {
 }
 /*--------------------*/
 .container {
-   width: 1420px;
+   max-width: 1420px;
    margin: 0 auto;
    min-height: 100%;
 }
@@ -58,6 +58,9 @@ body {
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 30px 0px;
+      @media (max-width: 999px) {
+         justify-content: center;
+      }
    }
 }
 .movie {
@@ -125,63 +128,58 @@ body {
    width: 100%;
    height: 100%;
 }
+.top__btn {
+   display: none;
+   position: fixed;
+   bottom: 70px;
+   right: 50px;
+   z-index: 99;
+   background-color: transparent;
+   cursor: pointer;
+   padding: 15px;
+   width: 40px;
+   height: 40px;
+   border-top: 10px solid #eef1f6;
+   border-right: 10px solid #eef1f6;
+   opacity: 0.3;
+   font-size: 26px;
+   transform: rotate(-45deg);
+   transition: all 0.3s ease;
+   &:hover {
+      opacity: 1;
+   }
+}
 /*--------------------*/
 .footer {
    background-color: #000;
-   // .footer__copy
-
    &__items {
       display: flex;
       justify-content: space-between;
    }
-
    &__copy {
       display: flex;
       justify-content: space-between;
       align-items: center;
       color: #eef1f6;
    }
-
-   // .footer__icon
-
    &__icon {
       margin: 0px 15px 0px 0px;
    }
-
-   // .footer__year
-
    &__year {
       margin: 0px 15px 0px 0px;
    }
-
-   // .footer__github
-
-   &__github {
-   }
-
-   // .footer__school
-
    &__school {
       width: 150px;
    }
 }
 
 .github {
-   // .github__link
-
    &__link {
       text-decoration: none;
       color: #eef1f6;
    }
 }
 .school {
-   // .school__link
-
-   &__link {
-   }
-
-   // .school__img
-
    &__img {
       filter: invert(1);
    }

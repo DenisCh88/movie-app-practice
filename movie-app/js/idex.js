@@ -107,4 +107,26 @@ form.addEventListener('submit', (e) => {
 })
 
  
+
+const mybutton = document.querySelector(".top__btn");
+
+const scrollFunction = () => {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+const topFunction = () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+window.addEventListener('scroll', scrollFunction)
+mybutton.addEventListener('click', topFunction)
+
+
+
+
  //https://api.themoviedb.org/3/search/movie?query=summer&api_key=4e862687ced12b29e07204eec8aa9590
