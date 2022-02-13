@@ -126,7 +126,6 @@ const topFunction = () => {
 window.addEventListener('scroll', scrollFunction)
 mybutton.addEventListener('click', topFunction)
 
-
 const headerButton = document.querySelector('.header__button');
 
 input.addEventListener('focus', () => {
@@ -136,7 +135,6 @@ input.addEventListener('focus', () => {
 input.addEventListener('blur', () => {
 	headerButton.classList.remove('header__button_focused');
 })
-
 
 headerButton.addEventListener('click', () =>{
 	input.value = '';
