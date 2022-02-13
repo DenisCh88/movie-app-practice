@@ -28,11 +28,17 @@ body {
       justify-content: flex-end;
       align-content: center;
       padding: 1rem;
+      &:focus {
+         background-color: #eef1f6;
+      }
    }
 
    &__search {
       border: 2px solid #eef1f6;
       border-radius: 50px;
+      border-right: none;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
       background-color: transparent;
       font-family: inherit;
       font-size: inherit;
@@ -45,6 +51,26 @@ body {
          background-color: #eef1f6;
       }
    }
+   &__button {
+      position: relative;
+      width: 40px;
+      border: 2px solid #eef1f6;
+      border-left: none;
+      border-bottom-right-radius: 50%;
+      border-top-right-radius: 50%;
+      background-color: #000;
+      &_focused {
+         background-color: #eef1f6;
+         cursor: pointer;
+      }
+   }
+}
+.header-button__img {
+   position: absolute;
+   height: 20px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
 }
 /*--------------------*/
 .main {

@@ -36,7 +36,7 @@ for(let i = 0; i < movieImage.length; i++){
 
  window.addEventListener('load', getData())
 
- function reset() {
+ const reset = () => {
 	document.querySelectorAll('.img__movie').forEach(el => {
 		 el.remove()
 	});
@@ -127,6 +127,20 @@ window.addEventListener('scroll', scrollFunction)
 mybutton.addEventListener('click', topFunction)
 
 
+const headerButton = document.querySelector('.header__button');
 
+input.addEventListener('focus', () => {
+	headerButton.classList.add('header__button_focused');
+})
+
+input.addEventListener('blur', () => {
+	headerButton.classList.remove('header__button_focused');
+})
+
+
+headerButton.addEventListener('click', () =>{
+	input.value = '';
+})
+ 
 
  //https://api.themoviedb.org/3/search/movie?query=summer&api_key=4e862687ced12b29e07204eec8aa9590
