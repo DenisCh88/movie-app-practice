@@ -127,4 +127,62 @@ body {
 }
 /*--------------------*/
 .footer {
+   background-color: #000;
+   // .footer__copy
+
+   &__items {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__copy {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #eef1f6;
+   }
+
+   // .footer__icon
+
+   &__icon {
+      margin: 0px 15px 0px 0px;
+   }
+
+   // .footer__year
+
+   &__year {
+      margin: 0px 15px 0px 0px;
+   }
+
+   // .footer__github
+
+   &__github {
+   }
+
+   // .footer__school
+
+   &__school {
+      width: 150px;
+   }
+}
+
+.github {
+   // .github__link
+
+   &__link {
+      text-decoration: none;
+      color: #eef1f6;
+   }
+}
+.school {
+   // .school__link
+
+   &__link {
+   }
+
+   // .school__img
+
+   &__img {
+      filter: invert(1);
+   }
 }
