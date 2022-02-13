@@ -97,7 +97,7 @@ body {
   font-family: "Inconsolata", sans-serif;
   font-size: 18px;
   background-color: #000;
-  background: url("../source/img/167271-zhivopis-risovanie-abstraktnoe_iskusstvo-art-cifrovoe_iskusstvo-1420x3000.jpg") 0 0/cover no-repeat fixed;
+  background: url("../source/img/167271-zhivopis-risovanie-abstraktnoe_iskusstvo-art-cifrovoe_iskusstvo-1420x3000.jpg") 0 0/contain no-repeat fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
