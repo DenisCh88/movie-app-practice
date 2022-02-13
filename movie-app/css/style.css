@@ -97,7 +97,7 @@ body {
   font-family: "Inconsolata", sans-serif;
   font-size: 18px;
   background-color: #000;
-  background: url("../source/img/167271-zhivopis-risovanie-abstraktnoe_iskusstvo-art-cifrovoe_iskusstvo-1420x3000.jpg") 0 0/contain no-repeat fixed;
+  background: url("../source/img/167271-zhivopis-risovanie-abstraktnoe_iskusstvo-art-cifrovoe_iskusstvo-1420x3000.jpg") 0 0/cover no-repeat fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,6 +106,11 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100%;
+}
+@media (max-width: 600px) {
+  body {
+    background: url("../source/img/167271-zhivopis-risovanie-abstraktnoe_iskusstvo-art-cifrovoe_iskusstvo-1420x3000.jpg") 0 0/auto 100% no-repeat fixed;
+  }
 }
 
 /*--------------------*/
