@@ -1,3 +1,4 @@
+/*--------loading------------*/
 const main = document.querySelector('.main');
 const movie = document.querySelectorAll('.movie');
 const container = document.querySelectorAll('.container');
@@ -35,28 +36,8 @@ for(let i = 0; i < movieImage.length; i++){
  }
 
  window.addEventListener('load', getData())
-
- const reset = () => {
-	document.querySelectorAll('.img__movie').forEach(el => {
-		 el.remove()
-	});
-	
-	movieHeader.forEach(el => {
-		el.innerHTML = '';
-	});
-	movieVote.forEach(el => {
-		el.innerHTML = '';
-	});
-	movieOverview.forEach(el => {
-		el.innerHTML = '';
-	});
-	if(document.querySelector('.error')){
-		document.querySelector('.error').remove();
-	}
-	
-}
-
- const getDataInput = async () => {
+/*----------search----------*/
+const getDataInput = async () => {
 	const urls = `https://api.themoviedb.org/3/search/movie?query=${input.value}&api_key=4e862687ced12b29e07204eec8aa9590`;
 	const res = await fetch(urls);
 	const data = await res.json();
@@ -65,6 +46,7 @@ for(let i = 0; i < movieImage.length; i++){
 	const title = results.map(el => el.title);
 	const vote = results.map(el => el.vote_average);
 	const overview = results.map(el => el.overview);
+	
 	if (results.length === 0) {
 		alert('oops.. something went wrong')
 		movie.forEach(el => {
@@ -93,11 +75,27 @@ for(let i = 0; i < movieImage.length; i++){
 			movieOverview[i].innerHTML = `Overview <br/> <br/> ${overview[i]}`;
 			}
 	}
-	console.log(results);
-	
-	console.log(urls)
  }
 
+ const reset = () => {
+	document.querySelectorAll('.img__movie').forEach(el => {
+		 el.remove()
+	});
+	
+	movieHeader.forEach(el => {
+		el.innerHTML = '';
+	});
+	movieVote.forEach(el => {
+		el.innerHTML = '';
+	});
+	movieOverview.forEach(el => {
+		el.innerHTML = '';
+	});
+	if(document.querySelector('.error')){
+		document.querySelector('.error').remove();
+	}
+	
+}
 
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
@@ -105,9 +103,7 @@ form.addEventListener('submit', (e) => {
 	getDataInput();
 	input.value = '';
 })
-
- 
-
+/*---------scroll-----------*/
 const mybutton = document.querySelector(".top__btn");
 
 const scrollFunction = () => {
@@ -119,13 +115,15 @@ const scrollFunction = () => {
 }
 
 const topFunction = () => {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+	window.scrollTo({ 
+		top: 0, 
+		behavior: 'smooth'
+	})
 }
 
 window.addEventListener('scroll', scrollFunction)
 mybutton.addEventListener('click', topFunction)
-
+/*-----------searchButton---------*/
 const headerButton = document.querySelector('.header__button');
 
 input.addEventListener('focus', () => {
@@ -139,6 +137,3 @@ input.addEventListener('blur', () => {
 headerButton.addEventListener('click', () =>{
 	input.value = '';
 })
- 
-
- //https://api.themoviedb.org/3/search/movie?query=summer&api_key=4e862687ced12b29e07204eec8aa9590
