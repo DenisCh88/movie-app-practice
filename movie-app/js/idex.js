@@ -101,7 +101,6 @@ form.addEventListener('submit', (e) => {
 	e.preventDefault();
 	reset();
 	getDataInput();
-	input.value = '';
 })
 /*---------scroll-----------*/
 const mybutton = document.querySelector(".top__btn");
@@ -137,3 +136,10 @@ input.addEventListener('blur', () => {
 headerButton.addEventListener('click', () =>{
 	input.value = '';
 })
+/*-----------focuse---------*/
+const setFocus = () => {
+	input.focus();
+	headerButton.classList.add('header__button_focused');
+}
+
+window.addEventListener('load', setFocus())
